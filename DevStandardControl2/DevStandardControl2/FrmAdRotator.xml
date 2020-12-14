@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~/images/ASP-NET-Banners-01.png</ImageUrl>
+		<NavigaterUrl>http://www.devlec.com/</NavigaterUrl>
+		<AlternateText>데브렉</AlternateText>
+		<keyword>데브렉</keyword>
+		<Impressions>25</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/images/ASP-NET-Banners-02.png</ImageUrl>
+		<NavigaterUrl>http://www.VisualAcademy.com/</NavigaterUrl>
+		<AlternateText>비주얼아카데미</AlternateText>
+		<keyword>비주얼아카데미</keyword>
+		<Impressions>25</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/images/ASP-NET-Banners-03.png</ImageUrl>
+		<NavigaterUrl>http://www.dotnetkorea.com/</NavigaterUrl>
+		<AlternateText>닷넷코리아</AlternateText>
+		<keyword>닷넷코리아</keyword>
+		<Impressions>25</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/images/ASP-NET-Banners-04.png</ImageUrl>
+		<NavigaterUrl>http://www.gilbut.co.kr/</NavigaterUrl>
+		<AlternateText>길벗</AlternateText>
+		<keyword>길벗</keyword>
+		<Impressions>25</Impressions>
+	</Ad>
+</Advertisements> 
