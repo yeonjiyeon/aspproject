@@ -689,6 +689,106 @@ Localize 컨트롤
 FrmLocalize.aspx
 ================================
 
+유효성 검사 컨트롤의 종류
+ASP.NET에서 제공하는 유효성 검사 컨트롤은 다음과 같다.
+▼ 표 8-1 유효성 검사 컨트롤의 종류
+유효성 검사 컨트롤		설명
+RequiredFieldValidator	컨트롤 값을 반드시 입력 받고자 할 때 사용
+(입력 확인 유효성 검사)	
+RangeValidator		컨트롤에 들어올 값의 범위를 지정할 때 사용
+(범위 확인 유효성 검사)
+CompareValidator		두 컨트롤의 값을 비교하는 데 사용
+(비교 확인 유효성 검사)
+RegularExpressionValidator	컨트롤에 입력 되는 데이터가 정규식에 맞는지 검사하는 데 사용
+(정규식 확인 유효성 검사)
+CustomValidator		ASP.NET에서 제공되지 않는 기능을 추가적으로 만들어 사용하고자 할 때 사용
+(사용자 정의 유효성 검사)	
+Dynamic Validator		동적으로 유효성 검사를 추가할 때 사용
+(동적 유효성 검사)	
+ValidationSummary		현재 웹 폼에 정의된 유효성 검사 컨트롤의 에러 메시지를 화면에 모아 서 출력하고자 할 때 사용
+(유효성 검사 요약)
+
+BaseValidator 클래스: 유효성 검사 컨트롤의 부모 클래스
+ 유효성 검사 관련 기본 클래스의 멤버
+==============================================================
+속성		설명
+----------------------------------------------------------------------------------------------------------------
+ControlToValidate	유효성 검사 대상이 되는 입력 컨트롤의 ID 속성을 지정한다.
+Display		웹 브라우저에 에러 메시지가 어떻게 표현될지를 결정한다.
+		•None: 에러 메시지를 표시하지 않는다.
+		•Static: 문자열의 길이만큼 공간을 차지해 출력한다.
+		•Dynamic: 에러가 출력되는 순간에 문자열의 길이가 늘어난다.
+ErrorMessage	유효성 검사 실패 시 나타나는 에러 메시지를 지정한다.
+ForeColor		에러 메시지의 글자색을 지정한다.
+ValidationGroup	웹 폼 하나에서 여러 그룹으로 묶어서 유효성 검사를 수행하고자 할 때 각각의 컨트롤과 
+		유효성 검사 컨트롤의 ValidationGroup 속성을 똑같이 구성한다.
+SetFocusOnError	유효성 검사를 통과하지 못한 컨트롤에 포커스를 줄지 여부를 설정한다.
+=====================================================================
+
+유효성 검사 사용 준비
+유효성 검사 컨트롤을 사용하려면 다음 3단계를 거쳐야 한다. 
+1. NuGet 패키지 관리자를 사용해 제이쿼리를 추가한다.
+2. NuGet 패키지 관리자를 사용해 AspNet.ScriptManager.jQuery를 추가한다.
+3. 웹 프로젝트 루트에 있는 Global.asax 파일의 Application_Start() 이벤트에 다음 코드를 입력한다.
+
+실습_ 유효성 검사 컨트롤 학습을 위한 웹 사이트 생성하기=================
+따라하기 1: 웹 프로젝트 생성 및 기본 페이지 작성
+DevValidationControl
+FrmValidationControl.aspx
+따라하기 2: 유효성 검사 컨트롤 사용을 위한 필수 단계 진행
+1) Visual Studio 2015 > 도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔
+    Install-Package jQuery
+    Install-Package AspNet.ScriptManager.jQuery
+2)Global.asax 파일을 열기
+=====================================================
+ 
+RequiredFieldValidator 컨트롤
+입력 확인 유효성 검사 컨트롤 소개
+입력 확인 유효성 검사 컨트롤은 반드시 입력 받아야 하는 값을 확인하는 컨트롤
+InitialValue	기본값으로 제공되는 텍스트를 입력해 놓고 이 값이 남아 있으면 유효성 검사를 통과시키지 않고, 새로운 값을 입력해야 통과시킨다
+실습_ RequiredFieldValidator 컨트롤을 사용한 아이디 및 암호 입력 확인======
+frmRequiredFieldValidator.aspx
+=========================================
+
+RangeValidator 컨트롤
+FrmRangeValidatior.html
+실습_ RangeValidator 컨트롤을 사용한 나이 및 학점 입력 검사=============
+FrmRangeValidator.aspx
+==========================================
+
+CompareValidator 컨트롤
+실습_ CompareValidator 컨트롤을 사용해 암호 확인하기========
+FrmCompareValidator.aspx
+=============================================
+
+RegularExpressionValidator 컨트롤
+정규식 확인 유효성 검사 컨트롤은 이메일, 홈페이지 URL, 주민등록번호, 카드번호 같이 일정한 규칙이 있는 데이터를 입력 받고자 할 때 유용하게 사용
+실습_ RegularExpressionValidator 컨트롤로 이메일 및 홈페이지 검사========
+FrmRegularExpressionValidator.aspx
+==================================================
+
+CustomValidator 컨트롤
+실습_ CustomValidator 컨트롤로 짝수 데이터만 입력 받기=====
+FrmCustomValidator.aspx
+=================================
+
+ValidationSummary 컨트롤
+ 실습_ ValidationSummary 컨트롤로 에러 메시지 요약하기====
+FrmValidationSummary.aspx
+===============================
+
+유효성 검사 활용 예제
+1.InitialValue 속성으로 기본값을 제외한 다른 값 선택하기
+ FrmDropDownListWithRequiredFieldValidator.aspx
+2.이용약관 동의 체크 확인하기
+FrmCheckBoxRequiredValidationWithCustomValidator.aspx
+3 체크박스에 값이 하나라도 체크되어 있는지 확인
+ FrmCheckBoxListValidation.aspx
+
+
+9장
+웹 폼 사용자 정의 컨트롤과 마스터 페이지
+
 
 
 
