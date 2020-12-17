@@ -528,5 +528,167 @@ FrmImageButton.aspx.cs
 =실습_ 세 가지 버튼 컨트롤을 사용해 명령어 실행===============================
 FrmCommandControl.aspx
 FrmCommandControl.aspx.cs
+=============================================================================
+HTML 대체 컨트롤
+ HyperLink 컨트롤
+NavigateUrl	링크를 클릭했을 때 이동할 경로
+ImageUrl		일반 텍스트 대신 이미지를 링크로 만들고자 할 때 사용
+=실습_ HyperLink 컨트롤을 사용해 링크 만들기=====================
+FrmHyperLink.aspx
+FrmHyperLink.aspx.cs
+====================================================
+
+Image 컨트롤
+=실습_ Image 컨트롤을 사용해 이미지 표시=====================
+FrmImage.aspx
+FrmImage.aspx.cs
+====================================
+
+ImageMap 컨트롤
+이미지맵 컨트롤을 사용하면 특정 이미지를 읽어 와 이미지에 좌표를 사용해 영역을 구분한 뒤 서로 다른 URL로 이동할 수 있다. 
+=실습_ ImageMap 컨트롤을 사용해 이미지맵 구현=====================
+RectangleHotSpot 컨트롤을 사용해 좌표 (0, 0)에서 (20, 120)까지 클릭하면 앞서 미리 작성한 FrmButton.aspx 페이지로 이동한다. 
+(20, 0)에서 (40, 120)까지 클릭하면 FrmLable.aspx 페이지로 이동하도록 설정한다. 
+이렇게 사각형 영역에 대한 좌표를 설정한다.
+
+Table 컨트롤
+=실습_ table 컨트롤을 사용해 표 만들기=========
+FrmTable.aspx
+====================================
+
+BulletedList 컨트롤
+불릿리스트 컨트롤은 HTML의 리스트를 출력하는 컨트롤
+BulletStyle 속성에 따라서 순서 있는 목록과 순서 없는 목록을 구분해서 출력할 수 있다
+=실습_ BulletedList 컨트롤을 사용해 목록 만들기=========
+FrmBulletedList.aspx
+FrmBulletedList.aspx.cs
+=========================================
+=실습_ HTML 대체 컨트롤을 사용해 HTML 주요 요소 표현=============
+FrmHtml.aspx
+==============================================
+
+DropDownList 컨트롤
+드롭다운리스트 컨트롤은 HTML의 <select><option> 태그의 조합을 ASP.NET 서버 컨트롤로 구현한 컨트롤
+=실습_ DropDownList 컨트롤을 사용해 콤보박스 만들기=============
+FrmDropDowList.aspx
+FrmDropDowList.aspx.cs
+*동적으로 DropDownList 생성 및 선택된 값 가져오기
+FrmDropDownListDynamicCreation.aspx
+=============================================
+
+ListBox 컨트롤
+실습_ ListBox 컨트롤을 사용해 리스트박스 만들기================
+FrmListBox.aspx
+==========================
+
+ CheckBox 컨트롤
+AutoPostBack	체크박스가 선택되거나 해제되는 순간에 자동으로 서버 측으로 포스트백 (다시 게시)할 것인지 결정. 
+		true로 설정하면 매번 포스트백시킨다.
+실습_ CheckBox 컨트롤을 사용해 체크박스 만들기==========
+FrmCheckBox.aspx
+===============================
+
+CheckBoxList 컨트롤
+실습_ CheckBoxList 컨트롤을 사용해 여러 개의 체크박스 만들기===
+FrmCheckBoxList.aspx
+==================================
+
+RadioButton 컨트롤
+실습_ RadioButton 컨트롤을 사용해 라디오버튼 만들기===========
+FrmRadioButton.aspx
+===========================================
+
+RadioButtonList 컨트롤
+실습_ RadioButtonList 컨트롤을 사용해 여러 개의 라디오버튼 만들기==
+FrmRadioButtonList.aspx
+===============================================
+실습_ 입력 컨트롤을 사용해 단일 또는 다중 항목 가져오기===============
+FrmInputControl.aspx
+================================================
+컨트롤 이용방법모를때 확인:http://www.microsoft.com/korea/msdn/
+
+HiddenField 컨트롤
+실습_ HiddenField 컨트롤을 사용해 폼 로드 시간 저장========
+FrmHiddenField.aspx
+=======================================
+
+Literal 컨트롤
+실습_ Literal 컨트롤을 사용해 간단한 텍스트 출력====
+ FrmLiteral.aspx
+=================================================
+
+
+리치 컨트롤이란
+ASP.NET 표준 컨트롤 중에는 단순한 HTML 태그를 출력하는 대신 달력, 광고 등 복합적인 모양을 제공하는 컨트롤이 있는데 이러한 컨트롤을 리치(Rich) 컨트롤이라고 한다
+Calendar 컨트롤
+실습_ Calendar 컨트롤을 사용해 달력 출력하기==
+FrmCalendar.aspx
+FrmCalendarQueryString
+============================
+
+AdRotator 컨트롤--> javascript 라이브러리를 이용해 처리하는 경우가 더 많음
+실습_ AdRotator 컨트롤을 사용해 광고 순환시키기=========
+FrmAdRotator.aspx
+FrmAdRotator.xml
+• <ImageUrl>: 광고에 사용할 이미지 경로
+• <NavigateUrl>: 광고 이미지를 클릭했을 때 이동할 경로
+• <AlternateText>: 이미지가 표시되지 않을 때 보여주는 대체 텍스트
+• <Keyword>: 광고 내용을 구분할 때 사용할 키워드
+• <Impressions>: 광고를 보여줄 빈도수
+
+FileUpload 컨트롤====================================
+FrmFileUpload.aspx
+새 폴더 추가	:	/files/
+*폴더에 쓰기 권한 설정
+① 파일 탐색기에서 업로드할 files 폴더에 마우스 오른쪽 버튼을 클릭한다. 상황 메뉴가 나타나면 속성을 선택한 후 보안 탭을 선택한다.
+② 폴더 속성의 보안 탭에서 편집 버튼을 클릭한 후 추가 버튼을 클릭한다. 
+선택할 개체 이름을 입력하십시오 입력란에 다음 그림과 같이 Everyone을 입력한 후 확인 버튼을 클릭해 추가한다
+③ 추가된 Everyone 권한을 선택한 후 아래 Everyone의 사용 권한 리스트에서 수정(쓰기) 권한에 허용을 체크하거나 모든 권한에 허용을 체크한다.
+④ 다음은 최종적으로 files 폴더가 Everyone의 사용 권한에 수정 권한이 추가로 설정된 상태를 보여준다.
+=========================================
+
+Wizard 컨트롤
+위저드 컨트롤은 프로그램을 설치하는 절차처럼 순서가 있는 작업을 진행할 때 이를 손쉽게 구현하도록 만들어 놓은 컨트롤
+실습_ Wizard 컨트롤을 사용해 단계별 페이지 실행하기=============
+FrmWizard.aspx
+==================
+
+XML 컨트롤
+실습_ XML 컨트롤을 사용해 회사 소개 페이지 구현하기===============
+FrmXml.aspx
+FrmXml.xml
+FrmXml.xsl
+==================================================
+*닷넷에 XML을 많이 적용해 사용하지만, 어렵다. 최근에는 XML보다 더 작은 용량으로 같은 표현을 할 수 있는 JSON(JavaScript Object Notation )을 많이 사용한다.
+
+MultiView 컨트롤과 View 컨트롤
+ 실습_ MultiView 컨트롤과 View 컨트롤로 로그인 모듈 구성하기=========
+FrmMultiView.aspx
+
+ Panel 컨트롤
+실습_ Panel 컨트롤을 사용해 그룹으로 보이기 및 숨기기==========
+FrmPanel.aspx
+==============================
+
+PlaceHolder 컨트롤
+실습_ PlaceHolder 컨트롤에 동적으로 버튼 컨트롤 추가하기
+FrmPlaceHolder.aspx
+=====================================
+
+ Substitution 컨트롤
+(대체) 컨트롤은 나중에 배우게 될 캐싱(성능 향상) 기능과 연관된 컨트롤이다. 
+전체 페이지가 캐싱되는 상황에서 특정 문자열 부분은 캐싱되지 않은 최신 자료를 출력하고자 할 때 이 컨트롤을 사용한다.
+ 실습_ Substitution 컨트롤을 사용해 매번 최신 정보로 출력==============
+FrmSubstitution.aspx
+==============================
+
+Localize 컨트롤
+로컬라이즈 컨트롤은 리터럴 컨트롤과 마찬가지로 정적인 텍스트를 웹 페이지에 표시하기 위한 컨트롤이다.
+리터럴 컨트롤과 기능이 거의 비슷하나 Mode 속성을 통해서 특정 태그를 인코드(Encode )해서 보여주는 기능이 가능하다.
+실습_ Localize 컨트롤을 사용해 텍스트 출력하기==================================================
+FrmLocalize.aspx
+================================
+
+
 
 
